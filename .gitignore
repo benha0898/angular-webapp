@@ -17,6 +17,7 @@
 
 # IDE - VSCode
 .vscode/*
+.vs
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -36,5 +37,5 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Backend Files
-/src/assets/backend
+# Backend config file
+/src/assets/backend/config.php
