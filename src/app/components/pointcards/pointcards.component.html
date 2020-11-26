@@ -1,0 +1,55 @@
+<mat-form-field>
+  <input matInput [(ngModel)]="pcid" placeholder="Enter pcid" (ngModelChange)="refresh()">
+  <button mat-icon-button matSuffix aria-label="clear" *ngIf="pcid" (click)="pcid=NULL; refresh();">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+
+<table mat-table [dataSource] = "pointcards" matSort>
+
+    <!--PCID Column-->
+    <ng-container matColumnDef="pcid">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>PCID</th>
+        <td mat-cell *matCellDef="let pointcard">{{pointcard.pcid}}</td>
+    </ng-container>
+
+    <!--Points Column-->
+    <ng-container matColumnDef="points">
+        <th mat-header-cell *matHeaderCellDef>Points</th>
+        <td mat-cell *matCellDef="let pointcard">{{pointcard.points}}</td>
+    </ng-container>
+
+    <!--Name Column-->
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef class="editable">Name</th>
+        <td mat-cell *matCellDef="let pointcard">
+            <mat-form-field>
+                <input matInput [(ngModel)]="pointcard.name" [disabled]="!pointcard.editing" (keydown.enter)="save(pointcard)">
+            </mat-form-field>
+        </td>
+    </ng-container>
+
+    <!--Phone Column-->
+    <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef class="editable">Phone</th>
+        <td mat-cell *matCellDef="let pointcard">
+            <mat-form-field>
+                <input matInput [(ngModel)]="pointcard.phone" [disabled]="!pointcard.editing" (keydown.enter)="save(pointcard)">
+            </mat-form-field>
+        </td>
+    </ng-container>
+
+    <!--Edit/Delete Column-->
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Action</th>
+        <td mat-cell *matCellDef="let pointcard">
+            <button mat-raised-button color="primary" *ngIf="!pointcard.editing" (click)="startEdit(pointcard)">Edit</button>
+            <button mat-raised-button color="accent" *ngIf="pointcard.editing" (click)="editPC(pointcard)">Save</button>
+            <span style="margin: 0 5px"></span>
+            <button mat-raised-button color="warn" (click)="deletePC(pointcard.pcid)">Delete</button>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

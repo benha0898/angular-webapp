@@ -1,0 +1,26 @@
+<h2 mat-dialog-title>{{data.cardType}} Transaction</h2>
+
+<div mat-dialog-content>
+    <div style="float:left" *ngIf="data.cardType=='Point Card'">
+        <h3 class="cardNo">PC No.: {{data.cardData[0].pcid}}</h3>
+        <h3 class="cardInfo">Name: {{data.cardData[0].name}}</h3>
+        <h3 class="cardInfo">Phone: {{data.cardData[0].phone}}</h3>
+        <h3 class="cardAmount">Points: {{data.cardData[0].points}}</h3>
+    </div>
+    <div style="float:left" *ngIf="data.cardType=='Gift Card'">
+        <h3 class="cardNo">GC No.: {{data.cardData[0].gcid}}</h3>
+        <h3 class="cardAmount">Balance: ${{data.cardData[0].balance}}</h3>
+    </div>
+    <button style="float:right" mat-raised-button color="accent" (click)="onNoClick()">Log Out</button>
+</div>
+
+<div mat-dialog-actions>
+    <div class="info" *ngIf="data.cardType=='Point Card'">
+        <button mat-raised-button color="primary" (click)="addPC(data.cardData[0].pcid)" [disabled]="this.disableAddPoint">Add Point</button>
+        <button mat-raised-button color="primary" (click)="redeemPC(data.cardData[0].pcid)" [disabled]="this.disableRedeem">Redeem</button>
+    </div>
+    <div class="info" *ngIf="data.cardType=='Gift Card'">
+        <button mat-raised-button color="primary" (click)="loadGC(data.cardData[0].gcid)">Add Money</button>
+        <button mat-raised-button color="primary" (click)="payGC(data.cardData[0].gcid)">Pay with Card</button>
+    </div>
+</div>

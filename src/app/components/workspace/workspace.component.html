@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <app-date-time></app-date-time>
+  <span style="flex:1 1 auto"></span>
+  <h1>E Nails</h1>
+  <span style="flex:1 1 auto"></span>
+  <button mat-raised-button color="accent" (click)="adminLogin()">Admin</button>
+  <button mat-raised-button color="accent" (click)="logout()">Log Out</button>
+</mat-toolbar>
+
+<div id="banner">
+  <button mat-raised-button color="primary" (click)="openCardDialog('Point Card')">POINT CARD</button>
+  <button mat-raised-button color="primary" (click)="openCardDialog('Gift Card')">GIFT CARD</button>
+</div>

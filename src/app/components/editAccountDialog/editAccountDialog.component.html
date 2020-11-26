@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>Edit Account</h2>
+
+<div mat-dialog-content>
+    <form #myForm="ngForm" (submit)="enter()">
+        <mat-form-field>
+            <input matInput [(ngModel)]="old_uname" name="old_username" placeholder="Old username" type="text" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [(ngModel)]="old_password" name ="old_password" placeholder="Old password" type="password" required>
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field>
+            <input matInput [(ngModel)]="new_uname" name="new_uname" placeholder="New username" type="text">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [(ngModel)]= "new_password" name ="new_password" placeholder="New password" type="password">
+        </mat-form-field>
+
+        <mat-error *ngIf="error">{{errorMessage}}</mat-error>
+    </form>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-raised-button (click)='enter()' color="primary" [disabled]="!myForm.form.valid">OK</button>
+    <button mat-button (click)='cancel()'>Cancel</button>
+</div>

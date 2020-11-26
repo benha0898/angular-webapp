@@ -1,0 +1,15 @@
+a.mat-accent {
+    background-color: #ffd740;
+}
+
+#main-content {
+    margin: 0 30px;
+}
+
+mat-toolbar button {
+    margin: 0 5px;
+}
+
+mat-nav-list {
+    padding: 0;
+}

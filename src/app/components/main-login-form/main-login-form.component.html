@@ -1,0 +1,15 @@
+<h2>Log in to continue</h2>
+<div class="container">
+    <form (submit)="barcode_login($event)">
+        <div>
+            <mat-form-field>
+                <input matInput id="barcode-pwd" name="barcode" placeholder="Barcode" type="text">
+            </mat-form-field>
+        </div>
+        <mat-error *ngIf="barcodeLoginError">Invalid barcode!</mat-error>
+        <div class="btn-div">
+            <button mat-raised-button color="accent" type="submit">Log In</button>
+        </div>
+    </form>
+    
+</div>

@@ -1,0 +1,22 @@
+button {
+    font-family: "PT Sans", sans-serif;
+}
+
+h3.cardNo {
+    font-size: 18px;
+}
+h3.cardAmount {
+    font-size: 64px;
+}
+
+.mat-dialog-actions button {
+    font-size: 20px;
+    margin: 10px 10px;
+    width: 130px;
+    height: 130px;
+}
+.mat-dialog-content button {
+    font-size: 20px;
+    width: 125px;
+    height: 60px;
+}

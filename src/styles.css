@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Merienda+One|PT+Sans|Vollkorn');
+
+* {
+    margin: 0;
+}
+
+.error-snack-bar-color {
+    background-color: #ff3333;
+    color: white;
+}
+
+.success-snack-bar-color {
+    background-color: #2f2d2d;
+    color: white;
+}
+
+.mat-button, .mat-raised-button, .mat-stroked-button {
+    font-family: 'PT Sans', sans-serif;
+}

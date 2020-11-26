@@ -1,0 +1,28 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" fixedInViewport="true" opened>
+      <mat-toolbar color="primary">Menu</mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="['pctransac']" (click)="navigate('Point Card Transactions')" routerLinkActive="mat-accent">PC Transactions</a>
+        <a mat-list-item [routerLink]="['gctransac']" (click)="navigate('Gift Card Transactions')" routerLinkActive="mat-accent">GC Transactions</a>
+        <a mat-list-item [routerLink]="['pointcards']" (click)="navigate('Point Cards')" routerLinkActive="mat-accent">Point Cards</a>
+        <a mat-list-item [routerLink]="['settings']" (click)="navigate('Settings')" routerLinkActive="mat-accent">Settings</a>
+        <a mat-list-item [routerLink]="['accounts']" (click)="navigate('Admin Accounts')" routerLinkActive="mat-accent">Accounts</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon aria-label="Menu" class="material-icons">menu</mat-icon>
+        </button>
+        <h2>ENails - {{currentMenu}}</h2>
+        <span style="flex:1 1 auto"></span>
+        <button mat-raised-button color="accent" (click)="toMain()">Back to Main</button>
+        <button mat-raised-button color="accent" (click)="logout()">Close Day</button>
+      </mat-toolbar>
+      <div id="main-content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  
+  </mat-sidenav-container>

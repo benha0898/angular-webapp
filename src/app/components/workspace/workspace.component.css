@@ -1,0 +1,32 @@
+mat-toolbar button {
+    margin: 0px 5px;
+    float: right;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    font-family: 'Merienda One', cursive;
+    font-size: 40px;
+    font-style: oblique;
+}
+
+#banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#banner button {
+    width: 300px;
+    height: 300px;
+    margin: 20px 20px;
+    display: inline-block;
+    font-family: 'Merienda One', cursive;
+    font-size: 40px;
+}
+#banner mat-icon {
+    font-size:80px;
+    width:80px;
+    height:80px;
+}

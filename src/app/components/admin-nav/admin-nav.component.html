@@ -1,0 +1,28 @@
+<mat-sidenav-container>
+  <mat-sidenav #drawer mode="side" opened>
+    <mat-toolbar color="primary">Admin Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">PC Transactions</a>
+      <a mat-list-item href="#">GC Transactions</a>
+      <a mat-list-item href="#">Settings</a>
+      <a mat-list-item href="#">Accounts</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">Admin Content</mat-toolbar>
+
+  </mat-sidenav-content>
+
+  <mat-toolbar color="primary">
+      <button mat-icon-button class="mat-icon-button sidenav-toggle-button">
+        <mat-icon aria-label="Menu" class="material-icons">menu</mat-icon>
+      </button>
+      <h1>
+        <a>Admin</a>
+      </h1>
+      <span style="flex:1 1 auto"></span>
+      <button mat-button>Log Out</button>
+    </mat-toolbar>
+
+</mat-sidenav-container>

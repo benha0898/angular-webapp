@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>Enter or Scan {{data.cardType}} Number</h2>
+
+<div mat-dialog-content>
+    <mat-form-field>
+        <input matInput name="card-number" type="number" [(ngModel)]="cardNumber" (keydown.enter)="login(data.cardType)">
+    </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-raised-button (click)='login(data.cardType)' color="primary">OK</button>
+    <button mat-button (click)='onNoClick()'>Cancel</button>
+</div>

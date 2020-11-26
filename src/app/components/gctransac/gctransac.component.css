@@ -1,0 +1,7 @@
+table td {
+    padding-right: 100px;
+}
+
+th.mat-header-cell {
+    min-width: 100px;
+}

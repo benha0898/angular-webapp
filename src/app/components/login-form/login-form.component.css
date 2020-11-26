@@ -1,0 +1,34 @@
+h2 {
+    font-family: 'Vollkorn', serif;
+    font-size: 30pt;
+    padding-bottom: 30px;
+    text-align: center;
+}
+h3 {
+    font-family: 'Vollkorn', serif;
+    font-size: 20pt;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+.container > form {
+    width: 300px;
+    text-align: center;
+    background-color:
+}
+
+input {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+button {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.btn-div {
+    text-align: center;
+}

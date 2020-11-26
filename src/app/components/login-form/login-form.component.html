@@ -1,0 +1,16 @@
+<h2>Log in to continue</h2>
+<form (submit)="login($event)">
+    <div>
+        <mat-form-field>
+            <input matInput name="username" placeholder="Username" type="text">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput name ="password" placeholder="Password" type="password">
+        </mat-form-field>
+    </div>
+    <mat-error *ngIf="loginError">Invalid username or password!</mat-error>
+    <div>
+        <button mat-raised-button color="accent" type="submit">Log In</button>
+    </div>
+</form>

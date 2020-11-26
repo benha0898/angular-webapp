@@ -1,0 +1,20 @@
+th.mat-header-cell {
+    min-width: 100px;
+}
+
+.editable {
+    min-width: 170px !important;
+}
+
+::ng-deep td .mat-form-field-infix {
+    width: 150px !important;
+}
+
+::ng-deep .mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline {
+    background-image: none !important;
+}
+
+input:enabled {
+    color:black;
+    font-weight: bold;
+}
